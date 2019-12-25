@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .outer{
+            width: 1364px;
+            margin:0 auto;
+        }
+        .header_outer{
+
+            overflow: hidden;
+        }
+        .header_logo{  /*网页全盛资本的logo*/
+            float: left;
+            height:90px ;
+            overflow: hidden;
+        }
+        .header_logo img{
+             width:195px;
+            height: 48px;
+            margin:22px 0 20px 112px;
+         }
+        .header_nav{
+            overflow: hidden;
+        }
+        .header_nav li{
+            height: 84px;
+            width: 84px;
+            float:right;
+            background-color: #898989;
+            margin-left: 2px;
+            color: #c3c4c4;
+        }
+        .header_nav li:nth-child(8) i{ /*网页顶部的集团首页战略规划等等精灵图的设置*/
+            background-position: 3px 0px;
+        }
+        .header_nav li:nth-child(7) i{
+            background-position: -57px 0px;
+        }
+        .header_nav li:nth-child(6) i{
+            background-position: -130px 0px;
+        }
+        .header_nav li:nth-child(5) i{
+            background-position: -203px 0px;
+        }
+        .header_nav li:nth-child(4) i{
+            background-position: -281px 0px;
+        }
+        .header_nav li:nth-child(3) i{
+            background-position: -354px 0px;
+        }
+        .header_nav li:nth-child(2) i{
+            background-position: -424px 0px;
+        }
+        .header_nav li:nth-child(1) i{
+            background-position: -496px 0px;
+        }
+        .header_nav li i{
+            width: 52px;
+            height: 34px;
+            background: url(" images/i-nav.png") 0 0 no-repeat;
+            display: block;
+          margin: 10px auto 0px auto;
+        }
+        .header_nav li p{
+            text-align: center;
+            margin-top:10px;
+        }
+        .header_nav li:hover i{
+            background-position-y:-55px;
+        }
+        .header_nav li:hover{
+            background-color: #c2191f;
+        }
+        .header_datu{
+
+            height:517px;
+            background: url(" images/datu.jpg") center center no-repeat;
+            margin: 6px auto 0px auto ;
+            position: relative;
+        }
+        .header_show{
+          position: absolute;
+            margin: 115px 0px 0px 517px ;
+        }
+        .header_show .header_show_shouhang{
+            font-size:39px;
+            border-right: 6px solid #d0000e;
+        }
+        .header_show p:nth-child(2){/*网页顶部的集团首页战略规划等等文字设置位置*/
+            font-size:64px;
+            color: #3f3b3a;
+        }
+        .header_show p:nth-child(3){
+            font-size: 25px;
+            color: #727172;
+        }
+        .header_show p:nth-child(4) {
+            font-size:20px;
+            color: #727172;
+            font-family: 新宋体;
+        }
+        .header_show p:nth-child(n) span{
+            color: #d11610;
+        }
+        .header_nav2 p{
+            float: left;
+            height:65px;
+            width: 225px;
+            line-height: 65px;
+            text-align: center;
+            color: #5b5959;
+            font-size: 18px;
+            border:1px solid #cdcdce;
+            margin-top: 2px;
+        }
+        .header_nav2 p:nth-child(1){
+            padding-right: 2px;
+        }
+        .header_nav2 p:hover {  /*网页大图下面的集团首页战略规划等等鼠标移动到上面会变成红色*/
+            background-color:#c2191f ;
+        }
+        .body_outer{
+            overflow: hidden;
+        }
+        .body_background{/*设置背景图片*/
+            background:url(" images/i-bj.png") center center no-repeat;
+            height: 470px;
+            position: relative;
+
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .body_img { /* 视频*/
+            line-height: 470px;
+            position: absolute;
+            height: 390px;
+            width: 560px;
+            left:70px;
+            top: 5px;
+        }
+        .body_right{
+            float: right;
+        }
+        .body_top{
+            margin: 68px 130px 30px 0 ;
+            text-align: right;
+            border-right: 6px solid #d0000e ;
+        }
+        .body_coom{/*设置企业简介下面的段落*/
+            width: 330px;
+            height: 129px;
+            margin-right: 128px;
+            font-size: 10px;
+        }
+        .body_bottom{
+            overflow: hidden;
+            margin-bottom:109px;
+            background: url(" images/i-bj2.png") center center no-repeat;
+        }
+        .body_bottom_biaoti p:nth-child(1){  /*设置全盛业务 个人理财 Floruit business 的位置和字体大小，颜色*/
+              font-size: 28px;
+              margin:53px  0px 0px 227px;
+            border-left: 5px solid #d0000e;
+            padding-left: 7px;
+          }
+        .body_bottom_biaoti p:nth-child(2){
+            margin:-29px 0px 0px 346px;
+        }
+        .body_bottom_biaoti p span:nth-child(n){
+            color: #d11110;
+        }
+        .body_bottom_biaoti p:nth-last-child(1){
+            font-size: 18px;
+            margin:0px  0px 0px 227px;
+            border-left: 5px solid #d0000e;
+            padding-left: 7px;
+        }
+        .body_bottom_box{
+            width: 1364px;
+            position: relative;
+        }
+        .body_bottom_box ul{/*全盛业务的照片滚动列表*/
+                width: 981px;
+                margin: 38px  0 0 227px ;
+            }
+        .body_bottom_box ul li{/*设置滚动图面的位置*/
+            width: 258px;
+            height: 392px;
+            background-color: red;
+            float: left;
+            margin-right:69px;
+        }
+        .body_bottom_box ul li div:nth-child(1) {/*设置滚动图面上面的背景颜色和宽高*/
+            width:258px ;
+            height: 84px;
+            background-color: #a3a4a4;
+            font-size: 24px;
+        }
+        .body_bottom_box ul li div:nth-child(2){/*设置滚动图面中间的背景和宽高*/
+            wideh:258px;
+            height: 184px;
+        }
+        .body_bottom_box ul li div:nth-last-child(1){/*设置滚动图面下面的背景颜色和宽高*/
+            width:258px ;
+            height: 124px;
+            background-color: #a0a0a1;
+        }
+        .body_bottom_box ul li div:nth-child(1)>p{/*设置滚动图面上面p的文字*/
+            font-size: 24px;
+            text-align: center;
+            color: #ffffff;
+            line-height: 84px;
+        }
+        .body_bottom_box ul li div:nth-child(3)>p{ /*设置滚动图面下面p的文字*/
+           width: 201px;
+            margin: 0 auto;
+            font-size: 11px;
+            text-indent:2em;
+            color:#ffffff ;
+        }
+        .body_bottom_box ul li div:nth-child(3)>p+a{  /*设置了解更多logo*/
+           background: url(" images/lj.png") center center no-repeat;
+            height: 21px;
+            width: 75px;
+            float: left;
+            display: block;
+            margin: 31px 0 0 83px;
+        }
+        .body_bottom_box ul li:nth-child(2)>div:nth-child(2) {  /*设置滚动图面*/
+           background: url(" images/i-yh2.jpg") center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .body_bottom_box ul li:nth-child(1)>div:nth-child(2) {
+            background: url(" images/coo-tu3.png") center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .body_bottom_box ul li:nth-child(3)>div:nth-child(2) {
+            background: url(" images/coo-tu2.png") center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .black1{  /*设置滚动图标的两个按钮*/
+            position: absolute;
+            background: url(" images/i-l.png")center center no-repeat;
+            height: 33px;
+            width: 29px;
+            top: 177px;
+        }
+        .black {
+            position: absolute;
+            background: url(" images/i-r.png") center center no-repeat;
+            height: 33px;
+            width: 29px;
+            right: 0px;
+            top: 177px;
+        }
+        .body_nav_dh{/*设置新闻动态的标题设置*/
+            height: 160px;
+            background-color: #807f80;
+            position: relative;
+            overflow: hidden;
+        }
+        .body_nav_dh_box{
+            background: url(" images/i-new.png") center center no-repeat;
+            height: 30px;
+            width: 37px;
+            position: absolute;
+            top: 64px;
+            left: 157px;
+        }
+        .body_nav_dh_box1{
+             font-size: 28px;
+             color: #ffffff;
+            margin: 60px 0 0 197px;
+         }
+        .body_nav_dh_box3{
+            font-size: 19px;
+            color: #ffffff;
+            margin: 0 0 0 197px;
+        }
+        .body_nav_dh_box4{
+            background: url(" images/red.png") center center no-repeat;
+            height: 5px;
+            width: 1168px;
+            margin: 0 0 0 197px;
+        }
+        .body_yellow{
+            overflow: hidden;
+        }
+        .body_yellow li{
+            width: 682px;
+            height: 318px;
+            background-color: #d4d5d5;
+            float: left;
+        }
+        .body_yellow li:nth-child(1){/*设置新闻动态下面的图片列表*/
+           background: url(" images/i-new01.png") center center no-repeat;
+            position:relative;
+        }
+        .body_yellow li:nth-child(2){
+          text-align: left;
+        }
+        .body_yellow li:nth-child(2)>h4{ /*文字设置 全盛资本刘阳:*/
+            margin: 64px 0 0 83px;
+            width: 517px;
+            font-size:24px;
+        }
+        .body_yellow li:nth-child(2)>h4+p{
+            margin: 32px 0 0 83px;
+            width: 517px;
+            font-size:17px;
+        }
+        .body_yellow li:nth-child(3){
+            text-align:left;
+        }
+        .body_yellow li:nth-child(3)>h4{/*文字设置 全盛资本金融 新常态”*/
+            margin: 64px 0 0 83px;
+            width: 517px;
+            font-size:24px;
+        }
+        .body_yellow li:nth-child(3)>h4+p{
+            margin: 32px 0 0 83px;
+            width: 517px;
+            font-size:17px;
+        }
+        .body_yellow li:nth-child(4){
+            background: url(" images/i-new02.png") center center no-repeat;
+            position:relative;
+        }
+        .body_yellow li:nth-child(1)>div:nth-child(1){/*设置新闻动态下面四张图片*/
+            background: url(" images/i-xia1.jpg") center center no-repeat;
+            height: 40px;
+            width: 42px;
+            position: absolute;
+            top: 318px;
+            left: 55px;
+        }
+        .body_yellow li:nth-child(1)>div:nth-child(2){
+            background: url(" images/i-shang1.jpg") center center no-repeat;
+            height: 40px;
+            width: 42px;
+            position: absolute;
+            top: 279px;
+            left: 55px;
+        }
+        .body_yellow li:nth-child(1)>div:nth-child(3){
+            background: url(" images/i-news2.png") center center no-repeat;
+            height: 200px;
+            width: 62px;
+            position: absolute;
+            top: 83px;
+            right:-50px;
+        }
+        .body_yellow li:nth-child(4)>div:nth-child(1){
+            background: url(" images/i-xia2.jpg") center center no-repeat;
+            height: 40px;
+            width: 42px;
+            position: absolute;
+            top: 0px;
+            right: 54px;
+        }
+        .body_yellow li:nth-child(4)>div:nth-child(2){
+            background: url(" images/i-shang2.jpg") center center no-repeat;
+            height: 40px;
+            width: 42px;
+            position: absolute;
+            top: -39px;
+            right: 54px;
+        }
+        .body_yellow li:nth-child(4)>div:nth-child(3){
+            background: url(" images/i-news1.png") center center no-repeat;
+            height: 200px;
+            width: 62px;
+            position: absolute;
+            top: 83px;
+            left:-50px;
+        }
+        .body_mendian{
+            height:684px;
+            overflow: hidden;
+            width: 1364px;
+        }
+        .body_mendian div:nth-child(1){  /*门店布局设置布局*/
+            background: url(" images/i-new03.png") center center no-repeat;
+            width: 682px;
+            height: 684px;
+            display: inline-block;
+            float: left;
+        }
+        .body_mendian div:nth-child(1)>p:nth-child(1){ /*门店文字设置*/
+            font-size:28px;
+            margin: 50px 0 0 227px ;
+            border-left: 5px solid  #d0000e;
+        }
+        .body_mendian div:nth-child(1)>p:nth-child(2){
+            font-size:21px;
+            margin:0 0 0 227px  ;
+            border-left: 5px solid  #d0000e;
+        }
+        .body_mendian div:nth-child(2)>img{ /*门店布局旁边的四张图片*/
+            width: 338px;
+            height:342px ;
+            float: left;
+        }
+        .body_mendian div:nth-child(2){
+            display: inline-block;
+            width: 676px;
+            height: 684px;
+            background-color: red;
+            vertical-align: top;
+            float: left;
+        }
+        .body_nav_dh_box2{
+            background: url(" images/i-coo-title.png") center center no-repeat;
+            height: 30px;
+            width: 37px;
+            position: absolute; /*定位是和上面的新闻动态是同样的类选择器*/
+            top: 64px;
+            left: 157px;
+        }
+        .body_nav_dh_box3{
+            font-size: 19px;
+            color: #ffffff;
+            margin: -25px 62px 0px 312px;
+        }
+        .foot_outer div:nth-child(1){
+            float: left;
+            padding: 70px 234px;
+            overflow: hidden;
+        }
+        .foot_outer div:nth-child(2) {/*设置联系我们的横标栏*/
+            height: 160px;
+            background:url(" images/i-con.png") center center no-repeat;
+            position: relative;
+            overflow: hidden;
+            width: 1366px;
+        }
+        .foot_outer div:nth-child(2)>div:nth-child(1){
+            background: url(" images/i-con-title.png") center center no-repeat;
+            height: 27px;
+            width: 26px;
+            position: absolute;
+            top: -2px;
+            left: -73px;
+            display: inline-block;
+        }
+        .foot_outer div:nth-child(2)>p:nth-child(2){
+            font-size: 26px;
+            color: #c2191f;
+            margin: 61px 0 0 199px;
+            display: inline-block;
+        }
+        .foot_outer div:nth-child(2)>p:nth-child(3){
+            font-size: 17px;
+            color: #c2191f;
+            margin: 0 0 0 12px;
+            display: inline-block;
+        }
+        .foot_outer div:nth-child(2)>p:nth-child(4){
+            font-size: 30px;
+            color: #c2191f;
+            margin: 0 0 0 114px;
+            display: inline-block;
+        }
+        .foot_outer div:nth-child(2)>p:nth-child(5){
+            font-size: 30px;
+            color: #c2191f;
+            margin: 0 0 0 48px;
+            display: inline-block;
+        }
+        .foot_outer div:nth-child(2)>div:nth-child(6){
+            background: url(" images/red.png") center center no-repeat;
+            height: 5px;
+            width: 1168px;
+            margin: 0 0 0 197px;
+            display: inline-block;
+        }
+        .foot_outer div:nth-child(2)>div:nth-child(7){
+            background: url(" images/gengduo.png") center center no-repeat;
+            height: 31px;
+            width: 122px;
+            margin: 0 0 0 621px;
+            display: inline-block;
+        }
+        .foot_outer div:nth-child(3){
+            padding-top: 40px;
+            padding-left: 112px;
+            padding-bottom: 62px;
+            overflow: hidden;
+        }
+        .foot_outer div:nth-child(3)>div:nth-child(1){
+            width: 225px;
+            border-right: 4px solid #c2191f;
+            padding: 4px 0;
+            float: left;
+        }
+        .foot_outer div:nth-child(3)>img{
+            float: right;
+            margin-right:33px;
+            overflow: hidden;
+        }
+        .foot_outer div:nth-child(3)>p:nth-child(3){
+            margin-right: 15px;
+            float: right;
+            color:#727172;
+            font-size: 16px;
+        }
+        .foot_outer div:nth-child(3)>p:nth-child(4){
+            margin-right: -299px;
+            margin-top: 22px;
+            float:right;
+            color:#727172;
+            font-size: 16px;
+        }
+        .foot_outer div:nth-child(3)>p:nth-child(5){
+            margin-right: 12px;
+            margin-top: 8px;
+            float: right;
+            color:#727172;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <header  class="header_outer">
+        <h1  class="header_logo">
+            <img src=" images/logo.png" alt="">
+        </h1>
+        <ul class="header_nav">
+            <li>
+                <i></i>
+                <p>站内搜索</p>
+            </li>
+            <li>
+                <i></i>
+                <p>在线客服</p>
+            </li>
+            <li>
+                <i></i>
+                <p>相关链接</p>
+            </li>
+            <li>
+                <i></i>
+                <p>全盛动态</p>
+            </li>
+            <li>
+                <i></i>
+                <p>合作中心</p>
+            </li>
+            <li>
+                <i></i>
+                <p>集团业务</p>
+
+            </li>
+            <li>
+                <i></i>
+                <p>战略规划</p>
+
+            </li>
+            <li>
+                <i></i>
+                <p>集团首页</p>
+
+            </li>
+        </ul>
+        <div class="header_datu">
+            <div class="header_show">
+                <span class="header_show_shouhang">全盛资本</span>
+                <p>您身边的金属服务管家</p>
+                <p>YOUR PERSONAL FINANCIAL SERVICES CHAMBERLAIN</p>
+                <P>个人理财<span>/</span>个人贷款 <span>/</span>消费金融<span>/</span>商业保险<span>/</span>三方支付</P>
+            </div>
+        </div>
+        <div class="header_nav2">
+                <p>全盛集团</p>
+
+                <p>战略规划</p>
+                <!-- <ul>
+                     <li>
+                         <p>战略规划</p>
+                         <a href=""></a>
+                        <div></div>
+                     </li>
+                     <li>战略布局</li>
+                     <li>战略合作</li>
+                     <li>全盛基金</li>
+                     <li>全盛资管</li>
+                     <li>全盛支付</li>
+                     <li>全盛传媒</li>
+                 </ul>-->
+                <p>全盛业务</p>
+
+                <p>合作中心</p>
+
+                <p>全盛动态</p>
+
+                <p>联系我们</p>
+        </div>
+    </header>
+    <div class="body_outer">
+        <div class="body_background"><!--设置背景图片-->
+
+                <video class="body_img"  controls   preload="auto" poster=" images/i-vedio.png06.png">
+                    <source src=" images/阴天快乐.mp4">
+                </video><!--视频设置-->
+            <div class="body_right">
+                <div class="body_top">
+                   <h2>企业简介</h2>
+                    <p>Company profile</p>
+                </div >
+                <p class="body_coom">中国全盛资本控股集团有限公司(以下简称全盛资本)是一家为企业及个人提供综合性金融咨询与服务的创新型集团公司。
+                借助集团遍布全国的门店网络及强大的资产与财富管理能力，为各类用户提供专业化、个性化、一站式的资产配置与财富管理解决方案。
+                打造第三方金融服务生态系统，让资本更好的为社会、经济发展服务，并逐步成为具备敏锐市场洞察力和娴熟资产、财富管理能力的金融服务行业领导品牌。
+                </p>
+            </div>
+        </div>
+        <div  class="body_bottom" >
+            <div class="body_bottom_biaoti">
+                    <p>全盛业务</p>
+                    <P>个人理财<span>/</span>个人贷款 <span>/</span>消费金融<span>/</span>商业保险<span>/</span>三方支付</P>
+                    <p>Floruit business</p>
+            </div >
+            <div class="body_bottom_box" >
+                <div class="black"></div>
+                <ul>
+                    <li>
+                        <div><p>信贷业务</p></div>
+                        <div>
+
+                        </div>
+                        <div>
+                            <p>全盛金融信贷业务是目前覆盖城市最广、服务用户最多的金融产品品台。</p>
+                            <a href="####" ></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div><p>理财业务</p></div>
+                        <div></div>
+                        <div>
+                            <p>全盛金融理财业务搭建了一个公正、公开、透明、诚信、实现更稳健投资收益的投资理财信息平台。</p>
+                            <a href=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div><p>三方支付</p></div>
+                        <div>
+
+                        </div>
+                        <div>
+                            <p>全盛金融三方支付业务针对中国多元化的支付和金融服务需求，创新推出收单模式和金融服务。</p>
+                            <a href=""></a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="black1"></div>
+            </div>
+        </div>
+        <div class="body_nav" >
+            <div class="body_nav_dh">
+                <div class="body_nav_dh_box" ></div>
+                <p class="body_nav_dh_box1">新闻动态</p>
+                <p class="body_nav_dh_box3">News information</p>
+                <div class="body_nav_dh_box4"></div>
+            </div>
+
+        </div>
+        <ul class="body_yellow" >  <!--设置新闻动态下面四张图片-->
+            <li>
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+            <li>
+                <h4>全盛资本刘阳: 2016年是金融行业最有机遇的-年</h4>
+                <p>2016年，中国整体经济增速放缓,集体悲观情绪弥漫。但挑战与机会并存，对于一一些因循守旧的企业所谓的困难，正是另一-些用于创新的企业的机会。近日，全盛资本董事长刘阳放言: 2016或将成为第三方金融服务最有机遇的一年。如此乐观的原因，他做出了精到分析。</p>
+            </li>
+            <li>
+                <h4>全盛资本金融  新常态”十三五开年大戏抢先看</h4>
+                <p>2016年是中央政府“十三五  计划的开局之年，而对于金融行业而言更是深刻认识新常态、逐步适应新常态、抓住新机遇实现新发展的关键一年。在这个背景下，全盛金融以创新的第三方金融服务模式，搭建围绕用户需求为中心的一- 站式综合金融服务平台。结构性的整合与优化金融产品渠道资源，让资本更好的为社会、经济发展服务。</p>
+            </li>
+            <li>
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+        </ul>
+        <div class="body_mendian">
+            <div>
+                <p>门店布局</p>
+                <p>Store layout</p>
+            </div>
+            <div>
+                <img src=" images/i-new04.png" alt="">
+                <img src=" images/i-new05.png" alt="">
+                <img src=" images/i-new06.png" alt="">
+                <img src=" images/i-new07.png" alt="">
+
+            </div>
+        </div>
+        <div body_nav1>
+            <div class="body_nav_dh">
+                <div class="body_nav_dh_box2" ></div>
+                <p class="body_nav_dh_box1">合作伙伴</p>
+                <p class="body_nav_dh_box3">partner</p>
+                <div class="body_nav_dh_box4"></div>
+            </div>
+        </div>
+    </div>
+    <footer  class="foot_outer">
+        <div >
+            <img src=" images/i-p01.jpg" alt="">
+            <img src=" images/i-p02.jpg" alt="">
+            <img src=" images/i-p03.jpg" alt="">
+            <img src=" images/i-p04.jpg" alt="">
+            <img src=" images/i-p05.jpg" alt="">
+            <img src=" images/i-p06.jpg" alt="">
+            <img src=" images/i-p07.jpg" alt="">
+            <img src=" images/i-p08.jpg" alt="">
+            <img src=" images/i-p09.jpg" alt="">
+            <img src=" images/i-p10.jpg" alt="">
+            <img src=" images/i-p11.jpg" alt="">
+            <img src=" images/i-p12.jpg" alt="">
+            <img src=" images/i-p13.jpg" alt="">
+            <img src=" images/i-p14.jpg" alt="">
+            <img src=" images/i-p15.jpg" alt="">
+            <img src=" images/i-p16.jpg" alt="">
+        </div>
+        <div >
+            <div></div>
+            <p>联系我们</p>
+            <p>Contactus</p>
+            <p>400-8786-00</p>
+            <p>400-8786-00</p>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div >
+                <img src=" images/logo.png" alt="">
+            </div>
+            <img src=" images/1.png" alt="">
+            <p>联系我们 | 加入我们 | 合作伙伴 | 版权声明  </p >
+            <p>京ICP备13001704 Copyright &copy2009 All Rights Reserved</p >
+            <p>北京全胜资本控股集团 400-8767-730 北京市朝阳区融科望京中心A座10层</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
